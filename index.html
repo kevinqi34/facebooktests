@@ -83,7 +83,20 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+  
+  
+  
+  
+  FB.login(function(response) {
+    if (response.authResponse) {
+        window.location.reload();
+    }
+}, {scope:'email,user_friends'});
+
+
 </script>
+
+
 
 <!--
   Below we include the Login Button social plugin. This button uses
